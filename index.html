@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ActiveClipsHub - Windows editor for vertical gaming clips</title>
+<meta name="description" content="ActiveClipsHub is a Windows desktop tool that turns gameplay and stream moments into vertical 9:16 clips with captions, and can send finished clips to TikTok after you approve each upload.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">ActiveClipsHub</a>
+  <nav aria-label="Main"><a href="./">Home</a><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>A Windows editor for vertical gaming clips</h1>
+  <p class="lead">ActiveClipsHub is a desktop application for Windows that helps a creator turn gameplay and stream moments into finished 9:16 Shorts, and then send a finished clip to TikTok only when the creator says so.</p>
+
+  <div class="card status">
+    <strong>Project status:</strong> in development, used by its author. The TikTok integration is built on TikTok's official
+    Login Kit and Content Posting API and is <strong>pending TikTok app review</strong>; until TikTok approves the app, public posting is
+    not available and the app is limited to the restrictions TikTok applies to unaudited apps.
+  </div>
+
+  <h2>What the app does</h2>
+  <ul>
+    <li><strong>Editing on your own PC.</strong> You pick a moment from a video you are allowed to use; the app renders a 1080x1920 clip with the face camera on top, gameplay below, a title card and word-by-word captions generated locally.</li>
+    <li><strong>Preview before export.</strong> A quick preview is created first. A final clip is exported only after you approve it.</li>
+    <li><strong>Optional TikTok connection.</strong> You can connect your own TikTok account through TikTok's Login Kit, review a finished clip, and either send it to your TikTok inbox as a draft or, when TikTok permits it for your account, post it directly.</li>
+    <li><strong>You stay in control.</strong> The TikTok connection never uploads or posts by itself: every TikTok upload needs your explicit confirmation for that specific clip, and you can disconnect and revoke access at any time. Automatic or scheduled posting to TikTok is not enabled.</li>
+  </ul>
+
+  <h2>How the TikTok connection works</h2>
+  <table>
+    <tr><th>Step</th><th>What happens</th></tr>
+    <tr><td>1. Connect</td><td>You click "Connect TikTok". Your browser opens TikTok's own authorization page. You choose whether to approve. ActiveClipsHub never sees your TikTok password.</td></tr>
+    <tr><td>2. Account shown</td><td>The app shows which TikTok account is connected (display name) so you know where a clip would go.</td></tr>
+    <tr><td>3. Choose a clip</td><td>You select an exported video stored on your PC and review the caption and settings.</td></tr>
+    <tr><td>4. Confirm</td><td>Only after you confirm, the video file is uploaded to TikTok using the official upload API.</td></tr>
+    <tr><td>5. Result</td><td>The app shows TikTok's own status. A local export is never reported as a TikTok post.</td></tr>
+    <tr><td>6. Disconnect</td><td>You can disconnect inside the app, which asks TikTok to revoke the access token and deletes the tokens stored on your PC.</td></tr>
+  </table>
+  <p>Permissions requested (scopes): <code>user.info.basic</code> (show the connected account), <code>video.upload</code> (send a draft to your inbox) and <code>video.publish</code> (post directly, when TikTok allows it for the account).</p>
+
+  <h2>Where your data lives</h2>
+  <p>ActiveClipsHub runs on your computer. The author does not operate a server that receives your videos or TikTok tokens. Details are in the <a href="privacy/">Privacy Policy</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, privacy requests or bug reports: <a href="mailto:RadioActiveClipsHub@hotmail.com">RadioActiveClipsHub@hotmail.com</a>. Website repository: https://github.com/activeclipshub/activeclipshub-site</p>
+</main>
+<footer>
+  <a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a>
+  <p>&copy; 2026 ActiveClipsHub. ActiveClipsHub is an independent project and is not affiliated with, endorsed by or sponsored by TikTok or ByteDance. TikTok is a trademark of its owner.</p>
+</footer>
+</body>
+</html>

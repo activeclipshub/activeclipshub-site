@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - ActiveClipsHub</title>
+<meta name="description" content="How ActiveClipsHub handles TikTok account data, tokens and videos.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../">ActiveClipsHub</a>
+  <nav aria-label="Main"><a href="../">Home</a><a href="./">Privacy Policy</a><a href="../terms/">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective date: 2026-11-20</p>
+
+  <p>ActiveClipsHub ("the app", "we") is a Windows desktop application for creating vertical gaming clips, operated by ActiveClipsHub ("the developer"). This policy explains what information the app and this website handle, especially when you connect a TikTok account. If you do not connect TikTok, the app does not contact TikTok at all.</p>
+
+  <h2>1. The short version</h2>
+  <ul>
+    <li>The app runs on your own computer. The developer does not run a server that receives your videos, captions or TikTok tokens.</li>
+    <li>A video is sent to TikTok only when you select it and confirm that specific upload.</li>
+    <li>TikTok access tokens are stored only on your PC, encrypted with Windows DPAPI for your Windows user account.</li>
+    <li>You can disconnect at any time; the app then asks TikTok to revoke the token and deletes it locally.</li>
+  </ul>
+
+  <h2>2. Information the app handles when you connect TikTok</h2>
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Where it is stored</th></tr>
+    <tr><td>Authorization code (one time)</td><td>Exchanged for tokens during login.</td><td>Kept in memory only; discarded after the exchange.</td></tr>
+    <tr><td>Access token and refresh token</td><td>To act on your TikTok account only for the actions you request, and to keep the connection without logging in again.</td><td>On your PC in <code>%LOCALAPPDATA%\ActiveClipsHub\tiktok</code>, encrypted with Windows DPAPI. Never sent to the developer.</td></tr>
+    <tr><td>TikTok account identifier (open_id) and the scopes you granted</td><td>To show that an account is connected and which permissions it has.</td><td>Same encrypted local storage.</td></tr>
+    <tr><td>Display name, username, avatar link and posting options (privacy levels, interaction settings, maximum video length) returned by TikTok</td><td>To show you which account a clip would go to and to apply TikTok's posting rules.</td><td>Held in memory while the app is open; not stored by the developer.</td></tr>
+    <tr><td>The video file you choose, its caption and the settings you select</td><td>To upload the clip to TikTok as a draft or post, after you confirm.</td><td>The video stays in your own folders. A copy is transferred to TikTok only when you confirm the upload.</td></tr>
+    <tr><td>Upload status and a short local history (file name, TikTok publish id, status, time)</td><td>To show progress and results.</td><td>A small file on your PC. It contains no tokens or passwords.</td></tr>
+  </table>
+
+  <h2>3. TikTok permissions (scopes)</h2>
+  <ul>
+    <li><code>user.info.basic</code>: read your basic profile information (for example display name and avatar) to show the connected account.</li>
+    <li><code>video.upload</code>: send a video to your TikTok inbox as a draft that you finish in TikTok.</li>
+    <li><code>video.publish</code>: post a video to your profile directly. TikTok restricts this for apps that have not passed its audit; until then only private posting is possible.</li>
+  </ul>
+  <p>The app uses these permissions only for the actions you start inside the app. It does not read your videos, followers, messages or analytics, and it does not post to TikTok automatically or on a schedule: automatic or scheduled posting to TikTok is not enabled, and every TikTok upload needs your confirmation.</p>
+
+  <h2>4. Who receives data</h2>
+  <p>When you connect or upload, data is exchanged directly between your computer and TikTok (TikTok's own servers), under TikTok's terms and privacy policy. The developer does not receive a copy and does not sell, rent or share your information for advertising. The app contains no analytics or advertising trackers.</p>
+
+  <h2>5. Other network activity in the app</h2>
+  <p>Editing, transcription (speech-to-text) and rendering run locally on your PC. The app also has an optional live-status monitor that, if you switch it on, requests the public channel pages of streaming platforms (Twitch, YouTube, Kick) to see whether a channel is live. It needs no login, does not send your videos, files or TikTok data, and those services can see your IP address as with any web request. This monitor does not record or download streams.</p>
+
+  <h2>6. This website</h2>
+  <p>This website is a static site hosted on GitHub Pages. We do not use cookies, analytics or tracking scripts on it. GitHub, as the host, may process technical data such as IP addresses in server logs under its own privacy statement.</p>
+
+  <h2>7. Retention and how to delete your data</h2>
+  <ul>
+    <li><strong>Disconnect in the app:</strong> use "Disconnect and revoke". The app calls TikTok's token-revocation endpoint and deletes the stored tokens from your PC. If TikTok cannot be reached, the local tokens are still deleted and the app tells you the revocation was not confirmed.</li>
+    <li><strong>Revoke from TikTok:</strong> you can also remove the app's access in your TikTok account's app and permission settings.</li>
+    <li><strong>Local files:</strong> delete the folder <code>%LOCALAPPDATA%\ActiveClipsHub\tiktok</code> to remove all stored tokens and the local history. Access tokens expire on their own (about 2 hours) and refresh tokens after a limited period set by TikTok.</li>
+    <li><strong>Content on TikTok:</strong> drafts and posts you sent to TikTok are held by TikTok; manage or delete them in TikTok.</li>
+  </ul>
+
+  <h2>8. Security</h2>
+  <p>Tokens are encrypted at rest with Windows DPAPI and are not written to logs. The app's local screens listen only on your own computer (127.0.0.1). No method of storage is perfectly secure; keep your Windows account protected.</p>
+
+  <h2>9. Children</h2>
+  <p>The app is not directed to children. Use of TikTok features is subject to TikTok's minimum age requirements.</p>
+
+  <h2>10. Your rights</h2>
+  <p>Because the developer does not hold your data, access and deletion are handled by the steps in section 7. For any privacy request or question, or if you believe the developer holds information about you, contact <a href="mailto:RadioActiveClipsHub@hotmail.com">RadioActiveClipsHub@hotmail.com</a>. Depending on where you live you may have additional rights under local law; we will respond as required.</p>
+
+  <h2>11. Changes</h2>
+  <p>If this policy changes, the new version will be published here with a new effective date.</p>
+
+  <h2>12. Contact</h2>
+  <p>ActiveClipsHub, <a href="mailto:RadioActiveClipsHub@hotmail.com">RadioActiveClipsHub@hotmail.com</a>, Portugal</p>
+</main>
+<footer>
+  <a href="./">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../">Home</a>
+  <p>ActiveClipsHub is an independent project and is not affiliated with, endorsed by or sponsored by TikTok or ByteDance.</p>
+</footer>
+</body>
+</html>
